@@ -1,3 +1,4 @@
-// BEGIN
+const getGirlFriends = (users) =>
+  users.flatMap((user) => user.friends).filter((f) => f.gender === 'female');
 
-// END
+export default getGirlFriends;

@@ -1,5 +1,8 @@
 import _ from 'lodash';
 
-// BEGIN
+const takeOldest = (users, n = 1) => {
+  const sorted = _.sortBy(users, (u) => Date.parse(u.birthday));
+  return sorted.slice(0, n);
+};
 
-// END
+export default takeOldest;
